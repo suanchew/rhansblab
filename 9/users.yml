@@ -8,4 +8,9 @@
       group:
         name: webadmin
         state: present
-        
+    - name: Create user accounts
+      user:
+        name: "{{ item.username }}"
+        groups: webadmin
+      loop: "{{ users }}"
+              
