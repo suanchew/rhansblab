@@ -1,0 +1,65 @@
+
+PLAY [NIC Configuration] ***************************************************************************************
+
+TASK [Gathering Facts] *****************************************************************************************
+ok: [serverb.lab.example.com]
+
+TASK [rhel-system-roles.network : Check which services are running] ********************************************
+ok: [serverb.lab.example.com]
+
+TASK [rhel-system-roles.network : Check which packages are installed] ******************************************
+ok: [serverb.lab.example.com]
+
+TASK [rhel-system-roles.network : Print network provider] ******************************************************
+ok: [serverb.lab.example.com] => {
+    "msg": "Using network provider: nm"
+}
+
+TASK [rhel-system-roles.network : Install packages] ************************************************************
+skipping: [serverb.lab.example.com]
+
+TASK [rhel-system-roles.network : Restart NetworkManager due to wireless or team interfaces] *******************
+skipping: [serverb.lab.example.com]
+
+TASK [rhel-system-roles.network : Enable and start NetworkManager] *********************************************
+ok: [serverb.lab.example.com]
+
+TASK [rhel-system-roles.network : Enable and start wpa_supplicant] *********************************************
+skipping: [serverb.lab.example.com]
+
+TASK [rhel-system-roles.network : Enable network service] ******************************************************
+skipping: [serverb.lab.example.com]
+
+TASK [rhel-system-roles.network : Ensure initscripts network file dependency is present] ***********************
+skipping: [serverb.lab.example.com]
+
+TASK [rhel-system-roles.network : Configure networking connection profiles] ************************************
+ok: [serverb.lab.example.com]
+
+TASK [rhel-system-roles.network : Show debug messages] *********************************************************
+ok: [serverb.lab.example.com] => {
+    "__network_connections_result": {
+        "_invocation": {
+            "module_args": {
+                "__debug_flags": "",
+                "connections": [],
+                "force_state_change": false,
+                "ignore_errors": false,
+                "provider": "nm"
+            }
+        },
+        "changed": false,
+        "failed": false,
+        "stderr": "\n",
+        "stderr_lines": [
+            ""
+        ]
+    }
+}
+
+TASK [rhel-system-roles.network : Re-test connectivity] ********************************************************
+ok: [serverb.lab.example.com]
+
+PLAY RECAP *****************************************************************************************************
+serverb.lab.example.com    : ok=8    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
+
