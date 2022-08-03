@@ -40,7 +40,7 @@
       filesystem:
         dev: "/dev/{{ item.vgroup }}/{{ item.name }}"
         fstype: xfs
-      loop: "{{ logical _volumes }}"
+      loop: "{{ logical_volumes }}"
 #      debug:
 #        msg: TODO
 #      loop: "{{ logical_volumes }}"
