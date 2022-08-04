@@ -10,4 +10,4 @@ augroup ansible_sc
   set smartcase
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
   autocmd FileType yaml vnoremap <F8> <S-i># <ESC>
-autogroup END
+augroup END
