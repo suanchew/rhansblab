@@ -13,7 +13,7 @@
 
 - name: Configuration file is installed
   template:
-#:    src: vsftpd.conf.j2
+    src: vsftpd.conf.j2
     dest: '{{ vsftpd_config_file }}'
     owner: root
     group: root
